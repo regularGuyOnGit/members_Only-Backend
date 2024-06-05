@@ -1,0 +1,13 @@
+extends layout 
+block content 
+
+  form(method="post" class="eliteForm")
+    .form-group 
+      label(for="answer" class="font-bold") Why Do you want to be an elite member ?
+      textarea#answer(name="answer", class="form-control mb-4" ,cols="30", placeholder="Type in atleast 30 characters.",  rows="10")
+      button(type="submit" class="btn btn-success") Submit
+
+
+  if errors 
+    each error in errors 
+     li.text-danger #{error.msg}

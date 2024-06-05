@@ -1,0 +1,14 @@
+extends layout 
+
+block content 
+
+  h1(class="font-bold text-xl text-muted text-center") Message Form
+
+  form(action="", method="post")
+    div.form-group 
+      label(for="title") Title : 
+      input#title(type="text", name="title" , class= "form-control") 
+    div.form-group
+      label(for="msg_text")  Message : 
+      textarea#msg_text(name="msg_text", cols="30", rows="10" , class="form-control")
+    button(type="submit",class="btn btn-success")  Submit
